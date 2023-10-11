@@ -20,13 +20,16 @@ public class Main {
 //                System.out.println(maxInt / inputValue);
 
         Scanner tabla = new Scanner(System.in);
-        int table = tabla.nextInt();
-        System.out.print("Sunt " + table + "table");
+        int casute = tabla.nextInt();
+        System.out.print("Sunt " + casute + " casute\n");
 
-        BigInteger boabe = BigInteger.valueOf(2);
+        BigInteger boabe = BigInteger.valueOf(0);
+        BigInteger boabePeCasuta = BigInteger.valueOf(1);
         int i;
-        for(i = 0; i < table - 1; i++){
-            boabe = boabe * 2;
+        for(i = 1; i <= casute; i++){
+            boabe = boabe.add(boabePeCasuta);
+            boabePeCasuta = boabePeCasuta.multiply(BigInteger.valueOf(2));
         }
+        System.out.println("Pe tabla de sah se afla " + boabe + " boabe");
     }
 }
