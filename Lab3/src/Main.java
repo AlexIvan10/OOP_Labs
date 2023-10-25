@@ -47,8 +47,8 @@ public class Main {
 
         String str = "Ana are mere";
         String voc = "aeiouAEIOU";
-        int c=0, v=0;
-        for(i=0; i<str.length(); i++){
+        int c = 0, v = 0;
+        for(i = 0; i < str.length(); i++){
             if(voc.contains(String.valueOf(str.charAt(i)))) {
                 v++;
             } else if(str.charAt(i) >= 'A' && str.charAt(i) <= 'z')
