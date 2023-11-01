@@ -1,5 +1,5 @@
 public class Sofer {
-    String nume;
+    private String nume;
     int varsta;
     char nrPermis;
 

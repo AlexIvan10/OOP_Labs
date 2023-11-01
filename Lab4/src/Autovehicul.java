@@ -11,14 +11,6 @@ public class Autovehicul {
     float rezervor;
     float rezervorMax;
 
-    public float getRezervor() {
-        return rezervor;
-    }
-
-    public void setRezervor(float rezervor) {
-        this.rezervor = rezervor;
-    }
-
     public String getMarca() {
         return marca;
     }
@@ -55,49 +47,56 @@ public class Autovehicul {
         this.sofer = sofer;
     }
 
+    public float getRezervor() {
+        return rezervor;
+    }
+
+    public void setRezervor(float rezervor) {
+        this.rezervor = rezervor;
+    }
 
     public void accelerare(float delta){
-        if(this.vitezaCurenta + delta > this.vitezaMaxima)
-            this.vitezaCurenta = vitezaMaxima;
+        if(vitezaCurenta + delta > vitezaMaxima)
+            vitezaCurenta = vitezaMaxima;
         else
-            this.vitezaCurenta = this.vitezaCurenta + delta;
+            vitezaCurenta = vitezaCurenta + delta;
     }
 
     public void decelerare(float delta) {
-        if (this.vitezaCurenta - delta < 0)
-            this.vitezaCurenta = 0;
+        if (vitezaCurenta - delta < 0)
+            vitezaCurenta = 0;
         else
-            this.vitezaCurenta = this.vitezaCurenta - delta;
+            vitezaCurenta = vitezaCurenta - delta;
     }
 
     public void schimbareTrepteSus(int delta){
-        if(this.trepteViteza + delta > this.trepteVitezaDisponibile)
-            this.trepteViteza = this.trepteVitezaDisponibile;
+        if(trepteViteza + delta > trepteVitezaDisponibile)
+            trepteViteza = trepteVitezaDisponibile;
         else
-            this.trepteViteza++;
+            trepteViteza++;
     }
 
     public void schimbareTrepteJos(int delta){
-        if(this.trepteViteza - delta < 0)
-            this.trepteViteza = 0;
+        if(trepteViteza - delta < 0)
+            trepteViteza = 0;
         else
-            this.trepteViteza--;
+            trepteViteza--;
     }
 
     public void oprire(){
-        this.vitezaCurenta = 0;
-        this.trepteViteza = 0;
+        vitezaCurenta = 0;
+        trepteViteza = 0;
     }
 
     public void umpleRezervor(int delta){
-        if(this.rezervor + delta > this.rezervorMax)
-            this.rezervor = this.rezervor;
+        if(rezervor + delta > rezervorMax)
+            rezervor = rezervorMax;
         else
-            this.rezervor = this.rezervor + delta;
+            rezervor = rezervor + delta;
     }
 
     public void golireRezervor(){
-        this.rezervor = 0;
+        rezervor = 0;
     }
     public Autovehicul(String marca, Color culoare, float vitezaMaxima, int trepteVitezaDisponibile, float rezervorMax){
         this.marca = marca;
@@ -108,6 +107,6 @@ public class Autovehicul {
     }
 
     public String toString(){
-        return "Soferul " + sofer.nume + " are varsta " + sofer.varsta + " are numarul de permis " + sofer.nrPermis + " si conduce marca " + marca + " are viteza curenta de " + vitezaCurenta + " si se afla in treapta " + trepteViteza + " si are rezervorul umplut cu " + rezervor + "l";
+        return "Soferul " + sofer.getNume() + " are varsta " + sofer.varsta + " are numarul de permis " + sofer.nrPermis + " si conduce marca " + marca + " are viteza curenta de " + vitezaCurenta + " km/h si se afla in treapta " + trepteViteza + " si are rezervorul umplut cu " + rezervor + "l";
     }
 }
