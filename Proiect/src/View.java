@@ -154,8 +154,6 @@ public class View extends Component {
                 }
             }
         }
-        System.out.println(ended);
-        print();
     }
     void generate() {
         for (int i = 0; i < 9; i++) {
@@ -222,14 +220,5 @@ public class View extends Component {
     }
     void setColor(int i, int j, Color color){
         smallBoxes[i][j].setBackground(color);
-    }
-    void print(){
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                System.out.print(viewModel.getCurrentTableValue(i, j) + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
     }
 }

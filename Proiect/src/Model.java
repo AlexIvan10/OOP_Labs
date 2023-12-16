@@ -109,13 +109,4 @@ public class Model {
     void setRowsCols(int number, int i, int j){
         currentTable[i][j] = number;
     }
-    void print(){
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                System.out.print(currentTable[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
 }
