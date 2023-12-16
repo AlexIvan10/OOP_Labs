@@ -52,18 +52,6 @@ public class Model {
             }
         }
     }
-    int getCurrentTableValue(int i, int j){
-        return currentTable[i][j];
-    }
-    int getInitialTableValue(int i, int j){
-        return sudokuTables[selected][i][j];
-    }
-    int getSolutionTableValue(int i, int j){
-        return solvedTable[i][j];
-    }
-    void setRowsCols(int number, int i, int j){
-        currentTable[i][j] = number;
-    }
     int valid(int xi, int xj, int x){
         for (int i = 0; i < 9; i++) {
             if(solvedTable[xi][i] == x || solvedTable[i][xj] == x)
@@ -109,10 +97,22 @@ public class Model {
         }
         return 0;
     }
+    int getCurrentTableValue(int i, int j){
+        return currentTable[i][j];
+    }
+    int getInitialTableValue(int i, int j){
+        return sudokuTables[selected][i][j];
+    }
+    int getSolutionTableValue(int i, int j){
+        return solvedTable[i][j];
+    }
+    void setRowsCols(int number, int i, int j){
+        currentTable[i][j] = number;
+    }
     void print(){
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                System.out.print(solvedTable[i][j] + " ");
+                System.out.print(currentTable[i][j] + " ");
             }
             System.out.println();
         }

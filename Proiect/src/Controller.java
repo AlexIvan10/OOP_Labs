@@ -23,12 +23,13 @@ public class Controller {
                 for (int j = 0; j < 9; j++) {
                     try {
                         userInput = controllerView.getUserInput(i, j);
-                        if(userInput.isEmpty())
+                        if(userInput.isEmpty()){
+                            controllerModel.setRowsCols(0, i, j);
                             controllerView.setColor(i, j, Color.YELLOW);
+                        }
+
                         else{
                             controllerModel.setRowsCols(Integer.valueOf(userInput), i, j);
-                            if(Integer.valueOf(userInput) < 1 || Integer.valueOf(userInput) > 9)
-                                controllerView.setColor(i, j, Color.RED);
                         }
                     } catch (NumberFormatException nfex) {
                         controllerView.setColor(i, j, Color.RED);

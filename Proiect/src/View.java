@@ -96,6 +96,10 @@ public class View extends Component {
         while(rows < 9){
             int value = viewModel.getCurrentTableValue(rows, cols);
             if(value != 0){
+                if(value < 1 || value > 9){
+                    checkMatrix[rows][cols] = 1;
+                    ended = 0;
+                }
                 for (int i = rows + 1; i < 9; i++) {
                     if(value == viewModel.getCurrentTableValue(i, cols)){
                         checkMatrix[rows][cols] = 1;
@@ -150,6 +154,8 @@ public class View extends Component {
                 }
             }
         }
+        System.out.println(ended);
+        print();
     }
     void generate() {
         for (int i = 0; i < 9; i++) {
