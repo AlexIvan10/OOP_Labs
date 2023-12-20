@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="14c3f74c-5344-4e96-8072-c5b3dec3d358" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +25,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Downloads/DemoCurs11-codInitial (1)/DemoCurs11-codInitial/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/user/Documents/OOP_Labs/Proiect/src/Main.java&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -45,6 +53,14 @@
       <workItem from="1702739529099" duration="6000" />
       <workItem from="1702739554529" duration="22000" />
       <workItem from="1702743127758" duration="64000" />
+      <workItem from="1702743722444" duration="391000" />
+      <workItem from="1702894096929" duration="615000" />
+      <workItem from="1702908980750" duration="21000" />
+      <workItem from="1702909019402" duration="214000" />
+      <workItem from="1702909255016" duration="601000" />
+      <workItem from="1702912289440" duration="400000" />
+      <workItem from="1702972870127" duration="21000" />
+      <workItem from="1703084848415" duration="338000" />
     </task>
     <servers />
   </component>
